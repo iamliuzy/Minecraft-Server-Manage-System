@@ -19,8 +19,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest]
-        python-version: ["3.9"]
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ['3.9']
+        exclude:
+          - os: macos-latest
+            python-version: '3.9'
+          - os: windows-latest
+            python-version: '3.9'
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python
@@ -28,4 +33,5 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
+        run: python -c "import sys; print(sys.version)"   
+        un: python -c "import sys; print(sys.version)"
