@@ -34,6 +34,8 @@
     <Compile Include="MSMS.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
     <Content Include="configuations.json" />
     <Content Include="LICENSE.txt" />
     <Content Include="README.md" />
