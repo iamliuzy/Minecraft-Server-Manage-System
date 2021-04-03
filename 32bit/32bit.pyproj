@@ -2,21 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>32e7bf9e-d9ce-4b0b-bb38-7bf7f88602a5</ProjectGuid>
-    <ProjectHome>
-    </ProjectHome>
-    <StartupFile>MSMS.py</StartupFile>
+    <ProjectGuid>1ad9d950-79d7-40ea-90d6-a4196a7402bc</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>_32bit.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>Minecraft Server Manage System</Name>
-    <RootNamespace>Minecraft Server Manage System</RootNamespace>
-    <InterpreterId>Global|PythonCore|3.9</InterpreterId>
-    <IsWindowsApplication>False</IsWindowsApplication>
-    <TestFramework>none</TestFramework>
-    <UnitTestPattern>test*.py</UnitTestPattern>
-    <UnitTestRootDirectory>.</UnitTestRootDirectory>
+    <Name>32bit</Name>
+    <RootNamespace>32bit</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,19 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="constants.py" />
-    <Compile Include="MSMS.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include=".gitattributes" />
-    <Content Include=".gitignore" />
-    <Content Include="configuations.json" />
-    <Content Include="LICENSE.txt" />
-    <Content Include="README.md" />
-    <Content Include="SECURITY.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterpreterReference Include="Global|PythonCore|3.9" />
+    <Compile Include="_32bit.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

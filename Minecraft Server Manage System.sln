@@ -9,24 +9,20 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AMD = Debug|AMD
 		Debug|AMD64 = Debug|AMD64
-		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
 		Release|AMD = Release|AMD
 		Release|AMD64 = Release|AMD64
-		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{32E7BF9E-D9CE-4B0B-BB38-7BF7F88602A5}.Debug|AMD.ActiveCfg = Debug|Any CPU
 		{32E7BF9E-D9CE-4B0B-BB38-7BF7F88602A5}.Debug|AMD64.ActiveCfg = Debug|Any CPU
-		{32E7BF9E-D9CE-4B0B-BB38-7BF7F88602A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{32E7BF9E-D9CE-4B0B-BB38-7BF7F88602A5}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{32E7BF9E-D9CE-4B0B-BB38-7BF7F88602A5}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{32E7BF9E-D9CE-4B0B-BB38-7BF7F88602A5}.Release|AMD.ActiveCfg = Release|Any CPU
 		{32E7BF9E-D9CE-4B0B-BB38-7BF7F88602A5}.Release|AMD64.ActiveCfg = Release|Any CPU
-		{32E7BF9E-D9CE-4B0B-BB38-7BF7F88602A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32E7BF9E-D9CE-4B0B-BB38-7BF7F88602A5}.Release|x64.ActiveCfg = Release|Any CPU
 		{32E7BF9E-D9CE-4B0B-BB38-7BF7F88602A5}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
