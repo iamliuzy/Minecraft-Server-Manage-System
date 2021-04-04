@@ -23,7 +23,6 @@ class MSMS(object):
             if key == "ver" or key == "version":
                 self.version = value
 
-
     def about(self):
         print("Minecraft Server Manage System. Version " + VERSION)
         print(COPYRIGHT)
