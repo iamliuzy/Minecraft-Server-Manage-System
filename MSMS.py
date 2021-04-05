@@ -25,7 +25,7 @@ class MSMS(object):
 
     def about(self):
         print("Minecraft Server Manage System. Version " + VERSION)
-        print(COPYRIGHT)
+        print(COPYRIGHT.replace("%s", os.path.abspath("."), 1))
 
     def parsting_command(self, command: str, commandlist: list):
         command_head = str(command.split(" ")[0])

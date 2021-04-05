@@ -13,10 +13,13 @@
     <Name>Minecraft Server Manage System</Name>
     <RootNamespace>Minecraft Server Manage System</RootNamespace>
     <InterpreterId>Global|PythonCore|3.9</InterpreterId>
-    <IsWindowsApplication>False</IsWindowsApplication>
+    <IsWindowsApplication>True</IsWindowsApplication>
     <TestFramework>none</TestFramework>
     <UnitTestPattern>test*.py</UnitTestPattern>
     <UnitTestRootDirectory>.</UnitTestRootDirectory>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterPath>E:\my\python_study\python-3.9.2\python.exe</InterpreterPath>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
