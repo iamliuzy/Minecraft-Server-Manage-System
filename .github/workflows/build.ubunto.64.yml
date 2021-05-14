@@ -1,4 +1,4 @@
-name: Build:ubuntu.86
+name: Build:ubuntu.64
 on:
   push:
     branches: [ main ]
@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-          architecture: x86
+          architecture: x64
       - name: Setup pyinstaller
         run: pip install pyinstaller
       - name: Build
