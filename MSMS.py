@@ -1,48 +1,70 @@
 import datetime
 import json
 import os
+import shelve
 from sys import exit
 
-from constants import *
+# width = x
+# height = y
+
+VERSION = "Indev 0.0.3"
+COMMANDS_TO_FUNCTIONS = {"about":  "self.about()", "exit":  "exit()", "quit":  "exit()"}
+COPYRIGHT = "Copyright (c) 2021 Shanghai Kouao Infotec Co., Ltd.\nLicense: GPL v3.0\nLicense file: %s\\LICENSE.txt"
+
 class MSMS(object):
-    class Configuation(object):
-        def __init__(self, id:str, displayname:str, ver:str):
-            self.id = id
-            self.displayname = displayname
-            self.version = ver
-            self.info = {"id": id, "disname": displayname, "version": ver}
-            f = open(os.path.dirname(__file__).replace("/", "\\") + "\\configuations.json", "w", encoding="utf-8")
-            f.write(json.dumps(self.info))
-            f.close()
-        def edit(self, key:str, value:str):
-            self.info[key] = value
-            if key == "id":
-                self.id = value
-            if key == "displayname" or key == "disname":
-                self.displayname = value
-            if key == "ver" or key == "version":
-                self.version = value
+    class Display(object):
+        def print_rich_text(self, text:str, mode:str):
+            return "\033[" + mode + "m" + text
+        def _cls(self):
+            if os.name == "nt":
+                os.system("cls")
+            elif os.name == "posix":
+                os.system("clear")
+            else:
+                print("Undefined system type.")
+                exit()
+        def update(self):
+            self._cls()
+            print(self.content)
+        def _set_title(self, title:str = "MSMS") -> None:
+            for i in range(self.width):
+                self.content += "-"
+            self.content += "|"
+            for i in range((self.width // 2 - len(self.title) // 2) - 1):
+                self.content += self.print_rich_text(" ", "7")
+            self.content += title
+            for i in range((self.width // 2 - len(self.title) // 2 - 1)):
+                self.content += " "
+            self.content += self.print_rich_text("|\n|", "0")
+            for i in range(self.width - 2):
+                self.content += "-"
+            self.content += "|\n"
+        def __init__(self, width, height, title:str="MSMS"):
+            self.content = ""
+            self.width = width
+            self.height = height
+            self.title = title
+            try:
+                int(width / 2)
+                int(height / 2)
+                int(len(title) / 2)
+            except:
+                raise
+            self._set_title(title)
+        def add_object(self, o, line:int, column:int):
+            self._set_title()
 
-    def about(self):
-        print("Minecraft Server Manage System. Version " + VERSION)
-        print(COPYRIGHT.replace("%s", os.path.abspath("."), 1))
+    class Text(object):
+        def __init__(self, SURF:object, o:str, line:int, column:int):
+            self.SURF = SURF
+            self.o = o
+            self.pos = (line, column)
 
-    def parsting_command(self, command: str, commandlist: list):
-        command_head = str(command.split(" ")[0])
-        if command_head not in commandlist:
-            print("Unkdown command:" + command)
-        else:
-            eval(COMMANDS_TO_FUNCTIONS[command_head])
 
     def __init__(self):
         try:
-            print("Welcome to use Minecraft Server Manage System.")
-            print('Type "help" for more information.')
-            repeat = True
-            while repeat == True:
-                command = input(">")
-                self.parsting_command(command, COMMANDS_TO_FUNCTIONS)
+            self.SCREEN = self.Display(os.get_terminal_size()[0], os.get_terminal_size()[1])
+            self.SCREEN.update()
         except KeyboardInterrupt:
             exit()
-
 MSMS()
