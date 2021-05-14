@@ -26,5 +26,7 @@ jobs:
       - name : Pack
         run: |
           zip -r MSMS-ubuntu.64-latest-full.zip . -i build\ubuntu-64\latest\
+      - name: Setup send tool
+        run: sudo apt-get install mailutils
       - name: Send
         run: mail -s "MSMS project ubuntu-x64 build" liuzhiyu@liuzhiyu.onmicrosoft.com -A "build\ubuntu-64\latest\MSMS-ubuntu.64-latest-full.zip" <<< "Please read."
