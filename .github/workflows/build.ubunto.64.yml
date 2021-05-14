@@ -25,6 +25,6 @@ jobs:
         run: pyinstaller "MSMS.py" --distpath "build\ubuntu-64\latest\dist\" --workpath "build\ubuntu-64\latest\build\" -y
       - name : Pack
         run: |
-          zip -r MSMS-ubuntu.64-latest-full.zip -i build\ubuntu-64\latest\
+          zip -r MSMS-ubuntu.64-latest-full.zip build\ubuntu-64\latest\
       - name: Send
         run: mail -s "MSMS project ubuntu-x64 build" liuzhiyu@liuzhiyu.onmicrosoft.com -A "build\ubuntu-64\latest\MSMS-ubuntu.64-latest-full.zip" <<< "Please read."
