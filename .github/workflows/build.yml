@@ -1,4 +1,4 @@
-name: CI
+name: Build:ubuntu.86
 on:
   push:
     branches: [ main ]
@@ -18,5 +18,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Display Python version
-        run: python
+          architecture: x86
+      - name: Setup pyinstaller
+        run: pip install pyinstaller
+      - name: Build
+        run: pyinstaller -distpath ".\build\ubunto\latest\dist\" -workpath ".\build\ubunto\latest\build\" -y
