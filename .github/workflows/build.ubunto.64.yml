@@ -29,4 +29,4 @@ jobs:
       - name: Setup send tool
         run: sudo apt-get install mailutils
       - name: Send
-        run: mail -s "MSMS project ubuntu-x64 build" liuzhiyu@liuzhiyu.onmicrosoft.com -A "MSMS-ubuntu.64-latest-full.zip" <<< "Please read."
+        run: mail -s "MSMS project ubuntu-x64 build" 1990220300@qq.com -A "MSMS-ubuntu.64-latest-full.zip" <<< "Please read."
