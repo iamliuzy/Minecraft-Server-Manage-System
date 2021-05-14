@@ -22,4 +22,4 @@ jobs:
       - name: Setup pyinstaller
         run: pip install pyinstaller
       - name: Build
-        run: pyinstaller -distpath ".\build\ubunto\latest\dist\" -workpath ".\build\ubunto\latest\build\" -y
+        run: pyinstaller --distpath ".\build\ubunto\latest\dist\" --workpath ".\build\ubunto\latest\build\" -y
