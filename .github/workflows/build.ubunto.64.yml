@@ -33,6 +33,7 @@ jobs:
           cd build
           git config --global user.email "liuzhiyu@liuzhiyu.onmicrosoft.com"
           git config --global user.name "Zhiyu Liu"
+          git push --set-upstream MSMS build
           git init
           git add *
           git commit -m "Ubunto-x64 builds latest"
