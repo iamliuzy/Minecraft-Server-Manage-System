@@ -27,7 +27,7 @@ jobs:
         run: |
           zip -r MSMS-ubuntu.64-latest-full.zip . -i build\ubuntu-64\latest\
       - name: Setup git
-        run: apt-get install git
+        run: sudo apt-get install git
       - name: Push
         run: |
           cd build\
