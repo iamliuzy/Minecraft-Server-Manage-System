@@ -30,7 +30,7 @@ jobs:
         run: sudo apt-get install git
       - name: Push
         run: |
-          cd build\
+          cd build
           git init
           git add *
           git commit -m "Ubunto-x64 builds latest"
