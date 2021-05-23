@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
+# Minecreft Server Manage System
 
-You can use the [editor on GitHub](https://github.com/iamliuzhiyu/Minecraft-Server-Manage-System/edit/gh-pages/docs/index.md) to maintain and preview the content for your website in Markdown files.
+A program to manage minecraft server on your computer.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Setup
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Unix-like
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash 
+  alias msms="\path\to\python\python.exe \path\to\here\MSMS.cpython-39.vx.y.z.pyc"
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Windows
 
-### Jekyll Themes
+The pack is recommed.When you want to run MSMS, just run:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/iamliuzhiyu/Minecraft-Server-Manage-System/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```batch
+  [ABCDEFGHIJKLMNOPQRSTUVWXYZ]/path/to/here/MSMS.exe
+```
 
-### Support or Contact
+Or if you use MSMS very often, you can make a shortcut:
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+ 1. Right click on your desktop. Then click "New" and "Shortcut".
+ 2. Click "Browse".
+ 3. Go to the path to here, and then choose "MSMS.exe", and then click "OK".
+ 4. Click "Next".
+ 5. Type "MSMS" in the box.
+ 6. Click "Finish".
+
+Then you can double click "MSMS" on your desktop to run MSMS.
+    
+## Authors
+
+- [@iamliuzhiyu](https://www.github.com/iamliuzhiyu)
+
+  
